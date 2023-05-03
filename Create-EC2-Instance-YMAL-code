@@ -1,0 +1,13 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: create instance
+Resources:
+  MyEC2Instance: 
+      Type: AWS::EC2::Instance
+      Properties: 
+          ImageId: "ami-090fa75af13c156b4"
+          KeyName: "Ec2-key"
+          AvailabilityZone: "us-east-1a"
+          InstanceType: "t2.micro"
+          Tags:
+            - Key: "Name"
+              Value: "ec2-name"
